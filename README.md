@@ -20,6 +20,7 @@ El proyecto que se muestra es para pruebas y se puede correr en cualquier sistem
 ```
 -Linux o Windows de 64-bit
 -Arduino IDE
+-Fritzing (solo si editar el archivo de diagrama de componentes)
 -Arduino 1 o superior
 -Protoboard
 -Cable de Protoboard
@@ -77,7 +78,12 @@ Para control de versiones revise este mismo repositoriorepositoryen (https://git
 
 No hay una licencia para este proyecto actualmente, es posible usarlo de manera libre
 
+## Links de descarga
+[Fritzing](http://fritzing.org/download/)
+
+[Arduino IDE](https://www.arduino.cc/en/Main/Software)
+
 ## Agradecimientos
 
-* Gracias a todos los que usen este software de manera libre
+* Agradecimientos a todos los que usen el software de manera libre
 
