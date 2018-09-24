@@ -2,7 +2,7 @@
 # Alarma de Seguridad en Arduino
 
 Simulación de alarma de seguridad en puerta residencial contra ladrones.
-![No hay imagen](images/20180924_122147.jpg)
+![No hay imagen](images/ejemplo2.jpg)
 
 ## Autor
 **Nombre:** Alfredo Valdivia barajas
