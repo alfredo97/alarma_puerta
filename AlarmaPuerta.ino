@@ -14,8 +14,6 @@ void setup() {
   pinMode(ledBlue, OUTPUT);
   pinMode(ledRed, OUTPUT);
   
-  attachInterrupt(digitalPinToInterrupt(puerta), alarmaOn, HIGH);
-  attachInterrupt(digitalPinToInterrupt(puerta), alarmaOff, LOW);
   
   Serial.begin(9600);
 }
@@ -25,34 +23,4 @@ void loop() {
     flash();
   }
 
-}
-
-
-void alarmaOn(){
-  onOff = true;
-  digitalWrite(led, HIGH);
-  Serial.println("Alarma Activada");  
-  attachInterrupt(digitalPinToInterrupt(puerta), alarmaOff, LOW);
-}
-
-void alarmaOff(){
-  
-  onOff = false;
-  digitalWrite(led, LOW);
-  digitalWrite(led, LOW);
-  attachInterrupt(digitalPinToInterrupt(puerta), alarmaOn, HIGH);
-  
-}
-
-void flash(){
-  digitalWrite(ledRed, LOW);
-  digitalWrite(ledBlue, HIGH);
-  tone(bocina, 700);
-  delay(300);
-  digitalWrite(ledBlue, LOW);
-  digitalWrite(ledRed, HIGH);
-  tone(bocina, 500);
-  delay(300);
-  digitalWrite(ledRed, LOW);
-  noTone(bocina);
 }
