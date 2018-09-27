@@ -30,6 +30,11 @@ El proyecto que se muestra es para pruebas y se puede correr en cualquier sistem
 -1 Imán
 -1 Speaker
 ```
+### Extra Funcionalidad
+```
+La funcionalidad extra contiene el uso de una matriz 8x8 y un circuito integrado 7219. 
+EN esta matriz se muestra una pequeña imagen de alerta; en el diagrama no se aprecia este componente
+```
 
 ### Instalación 
 
