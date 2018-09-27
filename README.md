@@ -1,7 +1,7 @@
 
 # Alarma de Seguridad en Arduino
 
-Simulación de alarma de seguridad en puerta residencial contra ladrones.
+Simulación de alarma de seguridad en puerta residencial contra ladrones con sistema de ahorro de energía
 ![No hay imagen](images/ejemplo2.jpg)
 
 ## Autor
@@ -29,6 +29,10 @@ El proyecto que se muestra es para pruebas y se puede correr en cualquier sistem
 -1 Reed switch
 -1 Imán
 -1 Speaker
+
+---Extra
+-Matriz 8x8
+-Integrado 7912
 ```
 ### Extra Funcionalidad
 ```
@@ -87,6 +91,8 @@ No hay una licencia para este proyecto actualmente, es posible usarlo de manera 
 [Fritzing](http://fritzing.org/download/)
 
 [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+
+[Libreria LowPower.h](https://github.com/rocketscream/Low-Power)
 
 ## Agradecimientos
 
