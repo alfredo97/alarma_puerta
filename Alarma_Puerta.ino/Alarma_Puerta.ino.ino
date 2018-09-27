@@ -1,5 +1,6 @@
 #include "LedControl.h"
 #include "binary.h"
+#include "LowPower.h"
 
 //Declaración de variables
 const int INDICADOR_BLUE = 4; //Led azul de la alarma
@@ -79,8 +80,11 @@ void setup() {
 }
 
 void loop() {
+  
   if(ON_OFF){
     flash();
+  }else{
+    LowPower.powerDown(SLEEP_2S, ADC_OFF, BOD_OFF);
   }
 
 }
