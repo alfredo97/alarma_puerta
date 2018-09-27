@@ -10,12 +10,13 @@ const int PUERTA = 18;        //Puerto del Reed Switch
 boolean ON_OFF = false;       //Indica si está abierta o cerrada la puerta
 
 /*
- DIN connects to pin 12
- CLK connects to pin 11
- CS connects to pin 10 
+ DIN va al pin 12
+ CLK va al pin 11
+ CS va al pin 10 
 */
 LedControl lc=LedControl(12,11,10,1);
 
+//Variables que representan las formas de las imágenes mostradas en la matriz, cada elemento de la variable byte es una columna
 byte image1[8] = {  
   B00000000,
   B00000000,
@@ -72,7 +73,7 @@ void setup() {
 
   lc.shutdown(0,false);
   // Set brightness to a medium value
-  lc.setIntensity(0,0);
+  lc.setIntensity(0,9);
   // Clear the display
   lc.clearDisplay(0);  
 }
@@ -102,27 +103,33 @@ void alarmaOff(){
 
 //Proceso de alarma en accion
 void flash(){
-  lc.clearDisplay(0);
+  lc.clearDisplay(0); //Limpia matriz
   delay(100);
   digitalWrite(INDICADOR_RED, LOW);
   digitalWrite(INDICADOR_BLUE, HIGH);
-  tone(SPEAKER, 700, 500);
-  
+  tone(SPEAKER, 700);
+  lc.setIntensity(0, 0);  
   drawImage1();
   delay(150);
+  lc.setIntensity(0, 3);
   drawImage2();
   delay(150);
   digitalWrite(INDICADOR_BLUE, LOW);
   digitalWrite(INDICADOR_RED, HIGH);
   tone(SPEAKER, 500);
+  
+  lc.setIntensity(0, 6);
   drawImage3();
   delay(150);
+  lc.setIntensity(0, 9);
   drawImage4();
   delay(150);
   digitalWrite(INDICADOR_RED, LOW);
   noTone(SPEAKER);
+  lc.clearDisplay(0);
 }
 
+//Métodos para dibujar en la matriz
 void drawImage1(){
   for(int i=0; i<8; i++){
     lc.setRow(0, i, image1[i]);
